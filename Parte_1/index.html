@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"   content="width= device-width,
+        initial-scale+1.0">
+        <title>Fundamentos javaScript</title>
+    </head>
+    <body>
+        <h1>Introducción a javaScript</h1>
+        
+    <script>
+        var hola="HOLa mundo";  //ambito global MALA PRACTICA
+        console.log(hola);
+        //ambitop de bloque
+        if(true){
+            var hola="Hola mundo";
+            console.log(hola);
+        }
+        let hola1="Hola mundo";
+        console.log(hola1);
+        console.log(window.hola);
+        console.log(window.hola1);
+        //ambito de bloque
+        var musica="Rock";
+        console.log("Fuera del bloque", musica);
+        {
+            var musica="Grunge";
+            console.log("Dentro del bloque", musica);
+        }
+        console.log("Despues del bloque", musica);
+
+        let musica2="Rock";
+        console.log("Fuera del bloque", musica2);
+        {
+            let musica2="Grunge";
+            console.log("Dentro del bloque", musica2);
+        }
+        console.log("Despues del bloque", musica2);
+    </script>
+
+    <script>    
+        const pi= 3.1416; // Son CONSTANTES EN EL TIEMPO DE EJECUCION
+        console.log(pi);
+        const objeto ={
+            nombre:"Juan",
+            apellido:"Perez",
+            edad:20
+        }
+        const colores =[1,2,3,4,5,6,7,8,9,10];
+        
+        console.log(objeto);
+        console.log(colores);
+
+        objeto.correo="juan.perez@mail.com"
+        colores.push(11);
+        console.log(objeto);
+        console.log(colores);
+        //Datos primitivos se accede por valor, los objetos son valores compuesto se accede por referencia
+
+
+    </script>
+    
+    <script>
+        //CADENAS DE TEXTO
+        let nombre="Juan";
+        let apellido= new String("Perez");
+        let lorem="Lorem ipsum dolor    sit amet consectetur adipisicing elit. Quisquam, quod.    ";
+        console.log(nombre,apellido);
+        console.log(nombre.length);
+        console.log(nombre.toUpperCase());
+        console.log(nombre.toLowerCase());
+        console.log(nombre.charAt(2));
+        console.log(lorem.split(" "));
+        console.log(lorem.trim());
+
+
+    </script>
+
+    <script>    
+    
+        let nombre1="Juan";
+        let apellido1="Perez";
+        let edad=20;
+        let texto="Hola, mi nombre es "+nombre1+" "+apellido1+" y tengo "+edad+" años";
+        //interpolacion de texto
+        let texto2=`Hola, mi nombre es ${nombre1} ${apellido1} y tengo ${edad} años`;
+        console.log(texto2);
+        let ul = `<ul>
+                    <li>Nombre: ${nombre1}</li>
+                    <li>Apellido: ${apellido1}</li>
+                    <li>Edad: ${edad}</li>
+                </ul>`;
+        document.write(ul);
+    
+    </script>
+
+    <script>    
+        let a =1;
+        let b =7.19;
+
+        console.log(a+b);
+        console.log(b.toFixed(1));
+        console.log(parseInt(b));
+        console.log(parseFloat(b));
+        console.log(typeof b);
+
+    
+    </script>
+    
+
+    <script>    
+    
+    //undefined no es asignado  y null es definido
+    //operaciones arimeticas sin sentido NaN
+    </script>
+
+    <script>
+        Declarada();
+        function Declarada(){
+            console.log("Funcion declarada");
+        }
+        
+
+        const funcionExpresada = function(){
+            console.log("Funcion expresada");
+        }   
+
+        funcionExpresada();
+
+
+
+    </script>
+    </body>
+
+</html>
