@@ -9,7 +9,7 @@
     <body>
         <h1>Introducción a javaScript</h1>
         
-    <script>
+    <!-- <script>
         var hola="HOLa mundo";  //ambito global MALA PRACTICA
         console.log(hola);
         //ambitop de bloque
@@ -110,12 +110,14 @@
     
 
     <script>    
+    // Clase 10 
     
     //undefined no es asignado  y null es definido
     //operaciones arimeticas sin sentido NaN
     </script>
 
     <script>
+        //Clase 11 Funciones
         Declarada();
         function Declarada(){
             console.log("Funcion declarada");
@@ -130,7 +132,271 @@
 
 
 
+    </script> -->
+    
+    <script>
+        // Clase 12 Objetos
+        // Los compuestos son referencias
+        // const persona={
+        //     nombre:"Juan",
+        //     apellido:"Perez",
+        //     edad:20,
+        //     trabajo:true,
+        //     musica:["Rock","Pop","Regueton"],
+        //     hogar:{
+        //         ciudad:"Guadalajara",
+        //         pais:"Mexico"
+        //     },
+        //     saludar:function(){
+        //         console.log(`Hola, soy ${this.nombre} ${this.apellido} y tengo ${this.edad} años`);
+        //     }
+        // }
+        //console.log(persona["nombre"]);
+        //console.log(persona.saludar());
+        //persona.saludar();
+        // console.log(Object.keys(persona));
+        // console.log(Object.values(persona));
+        // console.log(persona.hasOwnProperty("nombre"));
+        // console.log(persona.hasOwnProperty("nacimiento"));
     </script>
+
+    <script>
+        // Clase 13 y 14 Tipos de operadores
+        // Comparacion 
+        // == igualdad
+        // === estrictamente igual
+        // console.log(2=="2");
+        // console.log(2==="2");
+        // console.log(2===2);
+        // Operador ternario ? verdadero : falso
+        // let edad=15;
+        // console.log(edad>=18 ? "Eres mayor de edad" : "Eres menor de edad");
+        
+        //iteraciones
+        // const jhon={
+        //     nombre:"Jhon",
+        //     apellido:"Perez",
+        //     edad:20,
+        //     peso:75
+        // }
+        // for(const propiedad in jhon){
+        //     console.log(`Key: ${propiedad}, Value: ${jhon[propiedad]}`);
+        // }
+        // for(const elemento of Object.values(jhon)){
+        //     console.log(elemento);
+        // }
+
+    </script>
+
+    <script>
+        //clase 16 Error try catch finally
+        // try{
+        //     console.log("En el try se agrega el codigo a evaluar");
+        //     noExiste;
+        //     console.log("Segundo mensaje en el try");
+
+        // }catch(error){
+        //     console.log("Catch captura cualquier error surgido o lanzado en el try");
+        //     console.log(error);
+
+        // }finally{
+        //     console.log("El bloque finally se ejecutara siempre al final de un bloque try-catch");
+
+        // }
+    </script>
+
+    <script>
+        // Clase 19 Objetos literales
+        // let nombre = "Juan",
+        //     edad = 20;
+        // const persona ={
+        //     nombre,
+        //     edad,
+        //     mostrarInfo:function(){
+        //         console.log(`${nombre} tiene ${edad} años`);
+        //     }
+        // }
+        // persona.mostrarInfo();
+
+
+    </script>
+    <script>
+        //Clase 20 parametros rest y spread
+        // function suma(a,b,...c){
+        //     let resultado = a+b;
+        //     c.forEach(function(n){
+        //         resultado += n;
+        //     });
+        //     return resultado;
+        // }
+        // console.log(suma(1,2));
+        // console.log(suma(1,2,3));
+        // console.log(suma(1,2,3,4));
+
+        // const arr1=[1,2,3,4,5],
+        //     arr2=[6,7,8,9,0];
+        // console.log(arr1,arr2);
+        // console.log(...arr1,...arr2);
+
+                            // Clase 21 arrow functions
+        // const saludar = nombre => console.log(`Hola ${nombre}`);
+        // saludar("juan");
+
+        // const numeros = [1,2,3,4,5];
+
+        // numeros.forEach((el,index)=> console.log(`${el} esta en la posicion ${index}`));    
+        
+        // const perro={
+        //     nombre:"Firulais",
+        //     ladrar(){
+        //         console.log(this);
+        //     }
+        // }
+
+                             // Clase 22-23 Prototipos y herencia
+        // function Animal(nombre,genero){
+        //     //Atributos
+        //     this.nombre=nombre;
+        //     this.genero=genero;
+        //     //Metodos
+        //     this.sonar=function(){
+        //         console.log("Hago sonidos porque estoy vivo");
+        //     }
+
+        // }
+        // const snoppy = new Animal("Snoppy","Macho"),
+        //     lolaBunny = new Animal("Lola Bunny","Hembra");
+        // console.log(snoppy);
+        // snoppy.sonar();
+        // Animal.prototype.saludar=function(){
+        //     console.log(`Hola me llamo ${this.nombre}`);
+        // }
+
+        // // herencia prototipica
+        // function Perro(nombre,genero,tamanio){
+        //     this.super=Animal;
+        //     this.super(nombre,genero);
+        //     this.tamanio=tamanio;
+        // }
+        // Perro.prototype=new Animal();
+        // Perro.prototype.constructor=Perro;
+        // Perro.prototype.sonar=function(){
+        //     console.log("Ladra como un perro");
+        // }
+        // Perro.prototype.ladrar=function(){
+        //     console.log("Guauuuu Guauuuu");
+        // }
+        // const perro = new Perro("Snoppy","Macho","Mediano");
+        // console.log(perro);
+        // perro.saludar();
+        // perro.sonar();
+        // perro.ladrar();
+        
+        
+        
+                                        // Clase 24 Clases
+        // class Animal{
+        //     constructor(nombre,genero){
+        //         this.nombre=nombre;
+        //         this.genero=genero;
+        //     }
+        //     sonar(){
+        //         console.log("Hago sonidos porque estoy vivo");
+        //     }
+        //     saludar(){
+        //         console.log(`Hola me llamo ${this.nombre}`);
+        //     }
+        // }
+        // class Perro extends Animal{
+        //     constructor(nombre,genero,tamanio){
+        //         super(nombre,genero);
+        //         this.tamanio=tamanio;
+        //         this.raza=null;
+        //     }
+        //     sonar(){
+        //         console.log("Ladra como un perro");
+        //     }
+        //     ladrar(){
+        //         console.log("Guauuuu Guauuuu");
+        //     }
+        //     static queEres(){
+        //         console.log("Los perros somos animales mamiferos que pertenecemos a la familia de los caninos");
+        //     }
+        //     get getRaza(){
+        //         return this.raza;
+        //     }
+        //     set setRaza(raza){
+        //         this.raza=raza;
+        //     }
+        // }
+        // Perro.queEres(); //Metodo estatico se puede ejecutar sin instanciar la clase
+        // const mimi = new Animal("Mimi","Hembra"),
+        //     scooby = new Perro("Scooby","Macho","Gigante");
+        // console.log(mimi);
+        // console.log(scooby);
+
+
+                        // Clase 26 Objetos de consola
+
+        // const numeros=[1,2,3,4,5],
+        //     vocales=["a","e","i","o","u"],
+        //     boleanos=[true,false,false,true],
+        //     arreglo=[{
+        //         nombre:"Juan",
+        //         apellido:"Perez"
+        //     },{
+        //         nombre:"Maria",
+        //         apellido:"Perez"
+        //     }];
+        // console.table(numeros);
+        // console.table(vocales);
+        // console.table(boleanos);
+        // console.table(arreglo);
+        
+        // Date
+        // console.log(fecha);
+
+        // Math 28
+        // console.log(Math);
+
+        // Cortocircuito 29
+        // function saludar(nombre){
+        //     nombre = nombre || "Desconocido";
+        //     console.log(`Hola ${nombre}`);
+        // }
+        // console.log("cadena" || "valor de la derecha");
+        // console.log(-2 || "valor de la derecha");
+        // console.log("cadena" && "valor de la derecha");
+        // console.log(-2 && "valor de la derecha");
+
+
+        // Expresiones regulares 31
+        // let exp1 = new RegExp("/abc/"),
+        //     exp2 = /abc/,
+        //     cadena = "Hola mundo abc";
+        // console.log(exp1.test(cadena));
+        // console.log(exp2.test(cadena));
+        // console.log(exp2.exec(cadena));
+
+        // funcion anonima autoinvocada 32
+        // (function(){
+        //     console.log("Mi primer IIFE");
+        // })();
+        // (function(d,w,c){
+        //     console.log("Mi segunda IIFE");
+        //     console.log(d);
+        //     console.log(w);
+        //     c.log("Hola mundo");
+        // })(document,window,console);
+
+
+
+    </script>
+
+
+
+
+
     </body>
 
 </html>
